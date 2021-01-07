@@ -1,3 +1,30 @@
+/* Create one function that will receive 3 arguments
+    - Array A
+    - Array B
+    - operator ("OR","MINUS","AND")
+    It should return an array after applying the operation and also print the following message on console
+    "Array Operation <operator> has been performed on Array A of size:<sizeOfA> and Array B of size:<sizeOfB> 
+    and Output Array is of size:<sizeOfOutputArray>" 
+
+
+
+    Operator "OR" means:  A || B (Distinct Elements of  A OR B)
+    Operator "MINUS" means: A - B (Elements that are in A but NOT in B)
+    Operator "AND" means: A & B (Elements which are both in A AND  B)
+
+    Bonus: 
+        1.  Is there a way to get an Array which has elements present only in one of Arrays
+        2.  Assuming Arrays A and B are sorted & we want the result of above arrays also sorted, 
+            Does that change your code if yes, How can we change it?
+            Example
+                A = [ 1,3,5,10]
+                B =  [2, 4, 5 ,6]
+                
+                As per earlier function
+                A || B Acceptable Answer: [1,3,5,10,2,4,6]
+
+                In Sort Conditions Acceptable Answer is [1,2,3,4,5,6,10] */
+
 'use strict';
 
 const a = [1, 2, 3, 4, 5];
@@ -51,7 +78,7 @@ operation(a,b,'OR');
 operation(a,b,'AND');
 operation(a,b,'MINUS');
 
-//Bonus : Is there a way to get an Array which has elements present only in one of Arrays
+//Bonus 1: Is there a way to get an Array which has elements present only in one of Arrays
 const either= function(a,b){
 	const len_a = a.length;
   const len_b = b.length;
